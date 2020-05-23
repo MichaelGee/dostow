@@ -47,27 +47,22 @@
   font-size: 2.5rem !important;
   font-weight: bolder;
 }
-/* .login-btn{
-  background: #3066be;
-  line-height: 1.5rem;
-  color: white;
+
+form{
+  margin: 0 auto;
+}
+
+/* Button style */
+button {
+  border: none;
   padding: 8px 25px;
-  border:none;
-  transition: background 0.8s;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background-color: #3066be;
+  line-height: 1.5rem;
 }
-.login-btn:hover{
-  background: #3b70c5 radial-gradient(circle, transparent 1%, #3b70c5 1%) center/15000%;
-  transition: ease;
-}
 
-
-
-
-.login-btn:active {
-  background-color: #6eb9f7;
-  background-size: 100%;
-  transition: background 0s;
-} */
 .login-btn {
   background-position: center;
   transition: background 0.8s;
@@ -81,16 +76,14 @@
   transition: background 0s;
 }
 
-/* Button style */
-button {
-  border: none;
-  padding: 8px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  color: white;
-  background-color: #3066be;
-  line-height: 1.5rem;
+.button-area{
+  display: flex;
+  justify-content: space-between;
 }
+
+
+
+
 
 
 
