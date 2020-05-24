@@ -104,7 +104,26 @@ button {
   font-size: 0.8rem;
 }
 
+/* Navbar */
+.navbar{
+  background: #2fbf71;
+  
+}
+ .inner-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.stack{
+  width: 12%;
+  margin-right: 0.7rem;
+}
+.user{
+  width: 5%;
+}
 
+.navbar-brand{
+  font-weight: 400;
+}
 
 
 
@@ -127,7 +146,9 @@ button {
   }
   .banner-text{
     font-size: 2.5rem !important;
-    
+  }
+  .user{
+    width: 3%;
   }
 }
 .btn-round { border-radius: 30px; }
