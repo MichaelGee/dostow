@@ -107,7 +107,7 @@ button {
 /* Navbar */
 .navbar{
   background: #2fbf71;
-  
+  box-shadow: none !important;
 }
  .inner-nav{
   display: flex;
@@ -122,10 +122,42 @@ button {
 }
 
 .navbar-brand{
-  font-weight: 400;
+  font-weight: 300;
 }
 
+/* Infomation Banner */
+.info-banner{
+  display: flex;
+  justify-content: space-between;
+  background: rgb(103, 126, 115);
+  color: white;
+  padding: 2rem 4rem;
+}
 
+.progress-bar{
+  width: 50%;
+  background: white;
+}
+
+.arrow-area{
+  display: flex;
+  justify-content: space-between;
+}
+.arrow{
+  height: 50%;
+  margin-right: 1rem;
+}
+
+/* Email Banner */
+.email-banner{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.add-button{
+  background: #2fbf71;
+}
 
 
 @media (min-width: 768px) {
@@ -151,6 +183,3 @@ button {
     width: 3%;
   }
 }
-.btn-round { border-radius: 30px; }
-.bg-indigo { background: indigo; }
-.text-cyan { color: #35bdff; }
