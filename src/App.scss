@@ -1,0 +1,157 @@
+
+.left{
+  background: #2fbf71;
+}
+.dostow{
+  font-size: 1.5rem !important;
+  font-weight: bolder;
+}
+.banner-text{
+  font-size: 1.5rem !important;
+  font-weight: bolder;
+}
+
+form{
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+label {
+  color: #111111 !important;
+} 
+
+.custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control {
+  background-image: linear-gradient(0deg,#2fbf71 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;}
+
+  .custom-file-control:invalid, .form-control:invalid {
+    background-image: linear-gradient(0deg,#d50000 2px,rgba(213,0,0,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
+}
+
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 0.13em;
+  padding: 4px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  background-color: #2fbf71;
+  line-height: 1.5rem;
+}
+
+.login-btn {
+  background-position: center;
+  transition: background 0.8s;
+}
+.login-btn:hover {
+  background: #2fbf71 radial-gradient(circle, transparent 1%, #2fbf71 1%) center/15000%;
+}
+.login-btn:active {
+  background-color: #1daa5c;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.button-area{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-group{
+  margin-bottom: 0;
+}
+
+
+.signup-link{
+  font-size: 0.8rem;
+}
+
+/* Navbar */
+.navbar{
+  background: #2fbf71;
+  box-shadow: none !important;
+}
+ .inner-nav{
+  display: flex;
+  justify-content: space-between;
+}
+.stack{
+  width: 12%;
+  margin-right: 0.7rem;
+}
+.user{
+  width: 5%;
+}
+
+.navbar-brand{
+  font-weight: 300;
+}
+
+/* Infomation Banner */
+.info-banner{
+  display: flex;
+  justify-content: space-between;
+  background: rgb(103, 126, 115);
+  color: white;
+  padding: 2rem 4rem;
+}
+
+.progress-bar{
+  width: 50%;
+  background: white;
+}
+
+.arrow-area{
+  display: flex;
+  justify-content: space-between;
+}
+.arrow{
+  height: 50%;
+  margin-right: 1rem;
+}
+
+/* Email Banner */
+.email-banner{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.add-button{
+  background: #2fbf71;
+}
+
+/* Drawer */
+.bmd-layout-container{
+  height: 100vh;
+}
+.bmd-drawer-f-r>.bmd-layout-drawer{
+  width: 50%;
+  transform: translateX(750px);
+}
+
+
+@media (min-width: 768px) {
+  .h-md-100 { height: 100vh; }
+  form{
+    width: 50%;
+    padding:0;
+  }
+  button {
+    padding: 8px 25px;
+  }
+  .form-group{
+    margin-bottom: 1rem;
+  }
+  .dostow{
+    font-size: 2.5rem !important;
+    
+  }
+  .banner-text{
+    font-size: 2.5rem !important;
+  }
+  .user{
+    width: 3%;
+  }
+}
