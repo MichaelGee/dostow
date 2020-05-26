@@ -159,6 +159,10 @@ button {
   background: #2fbf71;
 }
 
+/* Drawer */
+.bmd-layout-container{
+  height: 100vh;
+}
 
 @media (min-width: 768px) {
   .h-md-100 { height: 100vh; }
