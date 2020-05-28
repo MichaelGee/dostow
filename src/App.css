@@ -105,9 +105,10 @@ button {
 
 .navbar-brand {
   font-weight: 300;
+  font-size: 1rem;
 }
 
-/* Infomation Banner */
+/* Information Banner */
 .info-banner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,7 +118,16 @@ button {
           justify-content: space-between;
   background: #677e73;
   color: white;
-  padding: 2rem 4rem;
+  padding: 1rem 1rem;
+  font-size: 0.7rem;
+}
+
+.info-banner h1 {
+  font-size: 1rem;
+}
+
+.banner-img {
+  width: 30%;
 }
 
 .progress-bar {
@@ -135,8 +145,8 @@ button {
 }
 
 .arrow {
-  height: 50%;
-  margin-right: 1rem;
+  height: 30%;
+  margin-right: 0.5rem;
 }
 
 /* Email Banner */
@@ -150,8 +160,15 @@ button {
   padding: 2rem 4rem;
 }
 
+.email-banner h1 {
+  font-size: 1rem;
+}
+
 .add-button {
   background: #2fbf71;
+  width: 2.5rem !important;
+  min-width: 2.5rem !important;
+  height: 2.5rem !important;
 }
 
 /* Drawer */
@@ -196,17 +213,42 @@ button {
   .dostow {
     font-size: 2.5rem !important;
   }
+  .navbar-brand {
+    font-weight: 300;
+    font-size: 1.3rem;
+  }
+  .info-banner {
+    padding: 2rem 4rem;
+  }
+  .info-banner h1 {
+    font-size: 2rem;
+  }
   .banner-text {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
   }
   .user {
     width: 3%;
+  }
+  .add-button {
+    width: 3.5rem !important;
+    min-width: 3.5rem !important;
+    height: 3.5rem !important;
   }
   .bmd-drawer-f-r > .bmd-layout-drawer {
     width: 50%;
   }
   .new-email-form {
     width: 80%;
+  }
+  .banner-img {
+    width: 50%;
+  }
+  .arrow {
+    height: 40%;
+    margin-right: 1rem;
+  }
+  .email-banner h1 {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=App.css.map */

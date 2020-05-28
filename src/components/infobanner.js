@@ -13,8 +13,8 @@ const Infobanner = () => {
         </div>
         <div className='d-flex flex-column'>
           <div className='d-flex'>
-            <img src={Storage} className='mr-2' />
-            <h1>5 GB</h1>
+            <img src={Storage} className='mr-3 banner-img' />
+            <h1>5GB</h1>
           </div>
           <div>
             <p className='mt-3 mb-1'>Disk Space</p>
@@ -31,7 +31,7 @@ const Infobanner = () => {
         </div>
         <div className='d-flex flex-column'>
           <div className='d-flex'>
-            <img src={User2} className='mr-2' />
+            <img src={User2} className='mr-2 banner-img' />
             <h1>100</h1>
           </div>
           <div>
