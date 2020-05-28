@@ -160,9 +160,23 @@ button {
 }
 
 .bmd-drawer-f-r > .bmd-layout-drawer {
-  width: 50%;
+  width: 70%;
   -webkit-transform: translateX(750px);
           transform: translateX(750px);
+}
+
+.close {
+  width: 5%;
+}
+
+.new-email-header {
+  margin: 2rem 2rem;
+}
+
+.new-email-form {
+  width: 80%;
+  float: left;
+  margin-left: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -187,6 +201,12 @@ button {
   }
   .user {
     width: 3%;
+  }
+  .bmd-drawer-f-r > .bmd-layout-drawer {
+    width: 50%;
+  }
+  .new-email-form {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=App.css.map */
