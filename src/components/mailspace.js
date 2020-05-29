@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./navbar";
 import Infobanner from "./infobanner";
 import Close from "../images/close.svg";
+import Accounts from "./accounts";
 
 const Mailspace = () => {
   return (
@@ -81,6 +82,7 @@ const Mailspace = () => {
               </button>
             </div>
           </div>
+          <Accounts />
         </main>
       </div>
     </div>

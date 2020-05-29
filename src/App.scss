@@ -1,4 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+body{
+ font-family: 'Manrope', sans-serif;
+}
 .left{
   background: #2fbf71;
 }
@@ -98,16 +101,16 @@ button {
   padding: 1rem 1rem;
   font-size: 0.7rem;
   h1{
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 .banner-img{
-  width: 30%;
+  width: 28%;
 }
 
 .progress-bar{
   width: 50%;
-  background: white;
+  background: rgb(224, 222, 222);
 }
 
 .arrow-area{
@@ -116,7 +119,7 @@ button {
 }
 .arrow{
   height: 30%;
-  margin-right: 0.5rem;
+  margin-right: 0.2rem;
 }
 
 /* Email Banner */
@@ -157,7 +160,29 @@ button {
   margin-left: 2rem;
 }
 
+/* Adresses */
+.options{
+  display: flex;
+  
+  a{
+    margin-left: 0.7rem;
+    cursor: pointer;
+  }
+} 
+.account{
+  padding: 0.4rem 0.4rem;
+  border-top: 1px solid rgb(211, 207, 207);
+  border-bottom: 1px solid rgb(211, 207, 207);
+  font-size: 0.7rem;
+  h1{
+    font-size: 1rem;
+  }
+}
 
+.email{
+  margin-left: 1rem;
+ 
+}
 
 
 
@@ -219,5 +244,11 @@ button {
       font-size: 2rem;
     }
   }
-  
+  .account{
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    h1{
+      font-size:2rem;
+    }
+  }
 }

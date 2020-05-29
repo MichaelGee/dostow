@@ -9,12 +9,15 @@ const Infobanner = () => {
       <div className='info-banner'>
         <div className='arrow-area'>
           <img src={Left} className='arrow' />
-          <h1>mailspace</h1>
+          <h1 className='font-weight-bold'>mailspace</h1>
         </div>
         <div className='d-flex flex-column'>
           <div className='d-flex'>
             <img src={Storage} className='mr-3 banner-img' />
-            <h1>5GB</h1>
+            <h1>
+              <span className='font-weight-bold'>5</span>
+              <span className='font-weight-light'>GB</span>
+            </h1>
           </div>
           <div>
             <p className='mt-3 mb-1'>Disk Space</p>
@@ -32,7 +35,9 @@ const Infobanner = () => {
         <div className='d-flex flex-column'>
           <div className='d-flex'>
             <img src={User2} className='mr-2 banner-img' />
-            <h1>100</h1>
+            <h1>
+              <span className='font-weight-bold'>100</span>
+            </h1>
           </div>
           <div>
             <p className='mb-1 mt-3'>Disk Space</p>
