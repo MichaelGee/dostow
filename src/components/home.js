@@ -15,6 +15,7 @@ const Home = (props) => {
   const login = async () => {
     try {
       await fire.login(email, password);
+      props.history.push("/mailspace");
       console.log("Logged in successful");
     } catch (error) {
       console.log(error.message);
