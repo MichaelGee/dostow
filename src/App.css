@@ -105,7 +105,14 @@ button {
 }
 
 .user {
-  width: 5%;
+  width: 20%;
+  height: 15%;
+  margin-top: 0px;
+}
+
+.logout-btn {
+  padding: .2rem 0.9rem;
+  font-size: 0.6rem;
 }
 
 .navbar-brand {
@@ -137,7 +144,11 @@ button {
 
 .progress-bar {
   width: 50%;
-  background: #e0dede;
+  background: black;
+}
+
+.progress {
+  background: white;
 }
 
 .arrow-area {
@@ -162,7 +173,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
 }
 
 .email-banner h1 {
@@ -225,7 +236,7 @@ button {
 }
 
 .email {
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -259,7 +270,15 @@ button {
     font-size: 2rem !important;
   }
   .user {
-    width: 3%;
+    width: 25%;
+    height: 10%;
+  }
+  .logout-btn {
+    padding: .46875rem 1rem;
+    font-size: 0.8rem;
+  }
+  .email-banner {
+    padding: 2rem 4rem;
   }
   .add-button {
     width: 3.5rem !important;

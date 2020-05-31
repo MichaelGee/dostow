@@ -1,6 +1,21 @@
 import React from "react";
+import firebase from "./fireConfig";
 
-const Signup = () => {
+const Signup = (props) => {
+  const [email, setEmail] = React.useState("");
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [confirmpassword, setConfirmpassword] = React.useState("");
+
+  const createUser = async () => {
+    try {
+      await firebase.signup(username, email, password);
+      props.history.replace("/mailspace");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div>
       <div className='d-md-flex h-md-100 align-items-center'>
@@ -20,7 +35,13 @@ const Signup = () => {
                 <label for='exampleInputEmail1' className='bmd-label-floating'>
                   Username
                 </label>
-                <input type='text' className='form-control' required />
+                <input
+                  type='text'
+                  className='form-control'
+                  required
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
               </div>
               <div className='form-group'>
                 <label for='exampleInputEmail1' className='bmd-label-floating'>
@@ -31,6 +52,8 @@ const Signup = () => {
                   className='form-control'
                   id='exampleInputEmail1'
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <span className='bmd-help'>
                   We'll never share your email with anyone else.
@@ -48,6 +71,8 @@ const Signup = () => {
                   className='form-control'
                   id='exampleInputPassword1'
                   required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 <span className='bmd-help'>
                   Make sure it's more than 6 characters.
@@ -65,12 +90,16 @@ const Signup = () => {
                   className='form-control'
                   id='exampleInputPassword1'
                   required
+                  value={confirmpassword}
+                  onChange={(e) => setConfirmpassword(e.target.value)}
                 />
                 <span className='bmd-help'>
                   Repeat your password to confirm.
                 </span>
                 <div className='mt-4 button-area'>
-                  <button type='button'>Sign Up</button>
+                  <button type='button' onClick={createUser}>
+                    Sign Up
+                  </button>
                 </div>
               </div>
             </form>

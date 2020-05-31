@@ -84,7 +84,13 @@ button {
   margin-right: 0.7rem;
 }
 .user{
-  width: 5%;
+  width: 20%;
+  height: 15%;
+  margin-top: 0px;
+}
+.logout-btn{
+  padding: .2rem 0.9rem;
+  font-size: 0.6rem;
 }
 
 .navbar-brand{
@@ -110,7 +116,10 @@ button {
 
 .progress-bar{
   width: 50%;
-  background: rgb(224, 222, 222);
+  background: black;
+}
+.progress{
+  background: white;
 }
 
 .arrow-area{
@@ -126,7 +135,7 @@ button {
 .email-banner{
   display: flex;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   h1{
     font-size: 1rem;
   }
@@ -180,7 +189,7 @@ button {
 }
 
 .email{
-  margin-left: 1rem;
+  margin-left: 0.8rem;
  
 }
 
@@ -218,7 +227,15 @@ button {
     font-size: 2rem !important;
   }
   .user{
-    width: 3%;
+    width: 25%;
+    height: 10%;
+  }
+  .logout-btn{
+    padding: .46875rem 1rem;
+    font-size: 0.8rem;
+  }
+  .email-banner{
+    padding: 2rem 4rem;
   }
   .add-button{
     width: 3.5rem !important;
