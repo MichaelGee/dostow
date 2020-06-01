@@ -20,7 +20,7 @@ const Navbar = (props) => {
         <div className='d-flex justify-content-between'>
           <button
             type='button'
-            class='logout-btn btn btn-outline-dark'
+            className='logout-btn btn btn-outline-dark'
             onClick={logout}
           >
             Logout

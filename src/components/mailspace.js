@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "./navbar";
 import Infobanner from "./infobanner";
-import Close from "../images/close.svg";
 import Accounts from "./accounts";
 
 const Mailspace = () => {
@@ -12,7 +11,6 @@ const Mailspace = () => {
         <div id='dw-p1' className='bmd-layout-drawer bg-faded'>
           <div className='d-flex new-email-header'>
             <h1>New E-Mail Account</h1>
-            {/*             <img src={Close} alt='close' className='close' /> */}
           </div>
 
           <form className='new-email-form'>
@@ -20,38 +18,41 @@ const Mailspace = () => {
               Create a new <span className='font-weight-bold'>E-Mail</span>{" "}
               account
             </p>
-            <fieldset class='form-group'>
-              <label for='exampleInputEmail1' class='bmd-label-static'>
+            <fieldset className='form-group'>
+              <label htmlFor='exampleInputEmail1' className='bmd-label-static'>
                 E-Mail
               </label>
               <input
                 type='email'
-                class='form-control'
+                className='form-control'
                 id='exampleInputEmail1'
                 required
               />
             </fieldset>
-            <fieldset class='form-group'>
-              <label for='exampleInputPassword1' class='bmd-label-static'>
+            <fieldset className='form-group'>
+              <label
+                htmlFor='exampleInputPassword1'
+                className='bmd-label-static'
+              >
                 New Password
               </label>
               <input
                 type='password'
-                class='form-control'
+                className='form-control'
                 id='exampleInputPassword1'
                 required
               />
-              <span class='bmd-help'>
+              <span className='bmd-help'>
                 Make sure it's more than 6 characters.
               </span>
             </fieldset>
-            <fieldset class='form-group'>
-              <label for='exampleInputEmail1' class='bmd-label-static'>
+            <fieldset className='form-group'>
+              <label htmlFor='exampleInputEmail1' className='bmd-label-static'>
                 Quota
               </label>
               <input
                 type='text'
-                class='form-control'
+                className='form-control'
                 id='exampleInputEmail1'
                 required
               />

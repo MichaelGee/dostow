@@ -41,7 +41,10 @@ const Home = (props) => {
             <form>
               <div className='mb-4 dostow'>Dostow Spaces</div>
               <div className='form-group'>
-                <label for='exampleInputEmail1' className='bmd-label-floating'>
+                <label
+                  htmlFor='exampleInputEmail1'
+                  className='bmd-label-floating'
+                >
                   Email address
                 </label>
                 <input
@@ -55,7 +58,7 @@ const Home = (props) => {
               </div>
               <div className='form-group'>
                 <label
-                  for='exampleInputPassword1'
+                  htmlFor='exampleInputPassword1'
                   className='bmd-label-floating'
                 >
                   Password

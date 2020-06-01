@@ -21,9 +21,9 @@ const Infobanner = () => {
           </div>
           <div>
             <p className='mt-3 mb-1'>Disk Space</p>
-            <div class='progress'>
+            <div className='progress'>
               <div
-                class='progress-bar'
+                className='progress-bar'
                 role='progressbar'
                 aria-valuenow='0'
                 aria-valuemin='0'
@@ -41,9 +41,9 @@ const Infobanner = () => {
           </div>
           <div>
             <p className='mb-1 mt-3'>Disk Space</p>
-            <div class='progress'>
+            <div className='progress'>
               <div
-                class='progress-bar'
+                className='progress-bar'
                 role='progressbar'
                 aria-valuenow='0'
                 aria-valuemin='0'

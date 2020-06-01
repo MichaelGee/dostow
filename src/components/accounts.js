@@ -25,9 +25,9 @@ const Accounts = () => {
             </div>
             <div>
               <p className='mt-3 mb-1'>Disk Space</p>
-              <div class='progress'>
+              <div className='progress'>
                 <div
-                  class='progress-bar'
+                  className='progress-bar'
                   role='progressbar'
                   aria-valuenow='0'
                   aria-valuemin='0'
