@@ -6,6 +6,7 @@ const Home = (props) => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [signedIn, setSignedIn] = React.useState(false);
+  const [error, setError] = React.useState("");
 
   React.useEffect(() => {
     fire.isInitialized((user) => {
@@ -18,6 +19,7 @@ const Home = (props) => {
       props.history.push("/mailspace");
       console.log("Logged in successful");
     } catch (error) {
+      setError(error.message);
       console.log(error.message);
     }
   };
@@ -27,7 +29,23 @@ const Home = (props) => {
   }
   return (
     <div>
-      <div className='d-md-flex h-md-100 align-items-center'>
+      {error ? (
+        <div className='alert-container'>
+          <div
+            class='alert alert-warning alert-dismissible fade show'
+            role='alert'
+          >
+            {error}
+            <button
+              type='button'
+              class='close'
+              data-dismiss='alert'
+              aria-label='Close'
+            ></button>
+          </div>
+        </div>
+      ) : null}
+      <div className='d-md-flex h-md-100 align-items-center home-container'>
         <div className='left col-md-6 p-0 h-md-100'>
           <div className='text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center'>
             <div className='logoarea pt-5 pb-5 banner-text font-weight-bold'>

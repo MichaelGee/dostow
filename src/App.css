@@ -46,6 +46,11 @@ button {
   line-height: 1.5rem;
 }
 
+.home-container {
+  position: relative;
+  z-index: 1;
+}
+
 .login-btn {
   background-position: center;
   -webkit-transition: background 0.8s;
@@ -249,6 +254,25 @@ button {
 
 .bmd-layout-backdrop {
   display: none;
+}
+
+.alert-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+.alert-container .alert {
+  width: 50%;
+  position: absolute;
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+  z-index: 5;
+  -webkit-transition-delay: 3s;
+          transition-delay: 3s;
 }
 
 @media (min-width: 768px) {

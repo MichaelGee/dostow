@@ -42,6 +42,10 @@ button {
   line-height: 1.5rem;
 }
 
+.home-container{
+  position: relative;
+  z-index: 1;
+}
 .login-btn {
   background-position: center;
   transition: background 0.8s;
@@ -199,6 +203,19 @@ button {
 }
 .bmd-layout-backdrop{
   display: none;
+}
+
+.alert-container{
+  display: flex;
+  align-content: center;
+  justify-items: center;
+  .alert{
+    width: 50%;
+    position: absolute;
+    transform: translate(50%);
+    z-index: 5;
+    transition-delay: 3s;
+  }
 }
 
 
