@@ -210,9 +210,11 @@ button {
   align-content: center;
   justify-items: center;
   .alert{
-    width: 50%;
+    width: 100%;
     position: absolute;
-    transform: translate(50%);
+    transform: translate(0%);
+    font-size: 0.6rem;
+    text-align: center;
     z-index: 5;
     transition-delay: 3s;
   }
@@ -297,6 +299,13 @@ button {
     padding: 1rem 1rem;
     h1{
       font-size:2rem;
+    }
+  }
+  .alert-container{
+    .alert{
+      width: 50%;
+      transform: translate(50%);
+      font-size: 0.8rem;
     }
   }
 }
