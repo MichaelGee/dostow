@@ -2,15 +2,47 @@ import React from "react";
 import Navbar from "./navbar";
 import Infobanner from "./infobanner";
 import Accounts from "./accounts";
+import Cancel from "../images/close.svg";
 
 const Mailspace = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const toggle = () => {
+    setOpen(!open);
+  };
   return (
     <div>
       {/* Right Drawer */}
-      <div className=' bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay'>
+      <div
+        className={
+          !open
+            ? "bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay"
+            : "bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay bmd-drawer-in"
+        }
+      >
+        <main className='bmd-layout-content'>
+          <div>
+            <Navbar />
+            <Infobanner />
+            <div className='email-banner'>
+              <h1>E-Mail Accounts</h1>
+              <button
+                type='button'
+                className='add-button btn bmd-btn-fab'
+                data-toggle='drawer'
+                data-target='#dw-p1'
+                onClick={toggle}
+              >
+                +
+              </button>
+            </div>
+          </div>
+          <Accounts />
+        </main>
         <div id='dw-p1' className='bmd-layout-drawer bg-faded'>
-          <div className='d-flex new-email-header'>
+          <div className='d-flex new-email-header '>
             <h1>New E-Mail Account</h1>
+            <img src={Cancel} alt='close' class='close' onClick={toggle} />
           </div>
 
           <form className='new-email-form'>
@@ -67,24 +99,6 @@ const Mailspace = () => {
             </div>
           </form>
         </div>
-        <main className='bmd-layout-content'>
-          <div>
-            <Navbar />
-            <Infobanner />
-            <div className='email-banner'>
-              <h1>E-Mail Accounts</h1>
-              <button
-                type='button'
-                className='add-button btn bmd-btn-fab'
-                data-toggle='drawer'
-                data-target='#dw-p1'
-              >
-                +
-              </button>
-            </div>
-          </div>
-          <Accounts />
-        </main>
       </div>
     </div>
   );

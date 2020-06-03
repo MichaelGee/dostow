@@ -20,7 +20,6 @@ function App() {
         <Switch>
           <Route component={Home} exact path='/' />
           <Route component={Signup} exact path='/signup' />
-          <Route component={Mailspace} exact path='/mailspace' />
           <ProtectedRoute component={Mailspace} exact path='/mailspace' />
         </Switch>
       </div>
