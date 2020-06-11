@@ -7,17 +7,27 @@ const Signup = (props) => {
   const [email, setEmail] = React.useState("");
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
-  const [confirmpassword, setConfirmpassword] = React.useState("");
+  const [error, setError] = React.useState("");
 
   let errors = {};
 
+  if (!username) {
+    errors.username = "Username is required";
+  } else if (
+    !/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(
+      username
+    )
+  ) {
+    errors.username = "Invalid username";
+  }
+
   if (!email) {
-    errors.email = "Email is required!";
+    errors.email = "Email is required";
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
     errors.email = "Invalid email address";
   }
   if (!password) {
-    errors.password = "Password is required!";
+    errors.password = "Password is required";
   } else if (/^(.{0,7}|[^0-9]*|[^A-Z]*|[^a-z]*)$/i.test(password)) {
     errors.password =
       "Password has to be at least 8 characters, one letter and one number";
@@ -29,28 +39,28 @@ const Signup = (props) => {
       props.history.replace("/mailspace");
     } catch (error) {
       console.log(error.message);
+      setError(error.message);
     }
   };
-  /* const createUser = async () => {
-    try {
-      await firebase.signup(username, email, password);
-      props.history.replace("/mailspace");
-    } catch (error) {
-      console.log(error.message);
-    }
-  }; */
-
-  /*  const createUser = async (email, password) => {
-    try {
-      await firebase.auth().createUserWithEmailAndPassword(email, password);
-      props.history.replace("/mailspace");
-    } catch (error) {
-      console.log(error.message);
-    }
-  }; */
 
   return (
     <div>
+      {error ? (
+        <div className='alert-container'>
+          <div
+            class='alert alert-warning alert-dismissible fade show'
+            role='alert'
+          >
+            {error}
+            <button
+              type='button'
+              class='close'
+              data-dismiss='alert'
+              aria-label='Close'
+            ></button>
+          </div>
+        </div>
+      ) : null}
       <div className='d-md-flex h-md-100 align-items-center'>
         <div className='left col-md-6 p-0 h-md-100'>
           <div className='text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center'>
@@ -110,8 +120,16 @@ const Signup = (props) => {
                 <span className='bmd-help'>{errors.password}</span>
               </div>
 
-              <div className='mt-4 button-area'>
-                <button type='button' onClick={createUser}>
+              <div className='mt-5 button-area'>
+                <button
+                  type='button'
+                  onClick={createUser}
+                  disabled={
+                    errors.username || errors.email || errors.password
+                      ? true
+                      : false
+                  }
+                >
                   Sign Up
                 </button>
               </div>

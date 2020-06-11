@@ -110,19 +110,26 @@ button {
 }
 
 .user {
-  width: 20%;
-  height: 15%;
-  margin-top: 0px;
+  width: 15%;
+  height: 10%;
+  margin: 0.8rem 0.1rem;
 }
 
 .logout-btn {
-  padding: .2rem 0.9rem;
-  font-size: 0.6rem;
+  margin: 1rem 0.4rem;
+  font-size: 0.8rem;
+  color: white !important;
+  cursor: pointer;
 }
 
 .navbar-brand {
   font-weight: 300;
   font-size: 1rem;
+}
+
+.username {
+  margin: 1rem 0.4rem;
+  color: white !important;
 }
 
 /* Information Banner */
@@ -225,6 +232,10 @@ button {
   margin-left: 2rem;
 }
 
+.bmd-help {
+  color: #ff1818 !important;
+}
+
 /* Adresses */
 .options {
   display: -webkit-box;
@@ -310,10 +321,10 @@ button {
   .user {
     width: 25%;
     height: 10%;
+    margin: 0 1rem;
   }
   .logout-btn {
-    padding: .46875rem 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .email-banner {
     padding: 2rem 4rem;

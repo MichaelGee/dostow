@@ -18,14 +18,11 @@ const Navbar = (props) => {
           <a className='navbar-brand text-white'>Dostow Space</a>
         </div>
         <div className='d-flex justify-content-between'>
-          <button
-            type='button'
-            className='logout-btn btn btn-outline-dark'
-            onClick={logout}
-          >
+          <p className='logout-btn ' onClick={logout}>
             Logout
-          </button>
+          </p>
           <img className='user' src={User} alt='user' />
+          <p className='username'>{firebase.getCurrentUser()}</p>
         </div>
       </nav>
     </div>
