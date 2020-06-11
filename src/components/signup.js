@@ -1,11 +1,27 @@
 import React from "react";
 import firebase from "./fireConfig";
+import { Formik } from "formik";
+import * as Yup from "yup";
 
 const Signup = (props) => {
   const [email, setEmail] = React.useState("");
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [confirmpassword, setConfirmpassword] = React.useState("");
+
+  let errors = {};
+
+  if (!email) {
+    errors.email = "Email is required!";
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+    errors.email = "Invalid email address";
+  }
+  if (!password) {
+    errors.password = "Password is required!";
+  } else if (/^(.{0,7}|[^0-9]*|[^A-Z]*|[^a-z]*)$/i.test(password)) {
+    errors.password =
+      "Password has to be at least 8 characters, one letter and one number";
+  }
 
   const createUser = async () => {
     try {
@@ -15,6 +31,23 @@ const Signup = (props) => {
       console.log(error.message);
     }
   };
+  /* const createUser = async () => {
+    try {
+      await firebase.signup(username, email, password);
+      props.history.replace("/mailspace");
+    } catch (error) {
+      console.log(error.message);
+    }
+  }; */
+
+  /*  const createUser = async (email, password) => {
+    try {
+      await firebase.auth().createUserWithEmailAndPassword(email, password);
+      props.history.replace("/mailspace");
+    } catch (error) {
+      console.log(error.message);
+    }
+  }; */
 
   return (
     <div>
@@ -42,6 +75,8 @@ const Signup = (props) => {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                 />
+
+                <span className='bmd-help'>{errors.username}</span>
               </div>
               <div className='form-group'>
                 <label for='exampleInputEmail1' className='bmd-label-floating'>
@@ -51,13 +86,11 @@ const Signup = (props) => {
                   type='email'
                   className='form-control'
                   id='exampleInputEmail1'
-                  required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <span className='bmd-help'>
-                  We'll never share your email with anyone else.
-                </span>
+
+                <span className='bmd-help'>{errors.email}</span>
               </div>
               <div className='form-group'>
                 <label
@@ -70,37 +103,17 @@ const Signup = (props) => {
                   type='password'
                   className='form-control'
                   id='exampleInputPassword1'
-                  required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <span className='bmd-help'>
-                  Make sure it's more than 6 characters.
-                </span>
+
+                <span className='bmd-help'>{errors.password}</span>
               </div>
-              <div className='form-group'>
-                <label
-                  for='exampleInputPassword1'
-                  className='bmd-label-floating'
-                >
-                  Re-enter password
-                </label>
-                <input
-                  type='password'
-                  className='form-control'
-                  id='exampleInputPassword1'
-                  required
-                  value={confirmpassword}
-                  onChange={(e) => setConfirmpassword(e.target.value)}
-                />
-                <span className='bmd-help'>
-                  Repeat your password to confirm.
-                </span>
-                <div className='mt-4 button-area'>
-                  <button type='button' onClick={createUser}>
-                    Sign Up
-                  </button>
-                </div>
+
+              <div className='mt-4 button-area'>
+                <button type='button' onClick={createUser}>
+                  Sign Up
+                </button>
               </div>
             </form>
           </div>
