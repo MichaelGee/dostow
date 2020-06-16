@@ -1,7 +1,6 @@
 import React from "react";
 import firebase from "./fireConfig";
-import { Formik } from "formik";
-import * as Yup from "yup";
+
 
 const Signup = (props) => {
   const [email, setEmail] = React.useState("");
@@ -14,7 +13,7 @@ const Signup = (props) => {
   if (!username) {
     errors.username = "Username is required";
   } else if (
-    !/^(?=.{8,20}$)(?![_.])(?!.*[_.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(
+    !/^(?=.{8,20}$)(?![_.])(?!.*[.]{2})[a-zA-Z0-9._]+(?<![_.])$/i.test(
       username
     )
   ) {
@@ -48,7 +47,7 @@ const Signup = (props) => {
       {error ? (
         <div className='alert-container'>
           <div
-            class='alert alert-warning alert-dismissible fade show'
+            className='alert alert-warning alert-dismissible fade show'
             role='alert'
           >
             {error}
@@ -75,7 +74,7 @@ const Signup = (props) => {
             <form>
               <div className='mb-4 dostow'>Sign Up Here</div>
               <div className='form-group'>
-                <label for='exampleInputEmail1' className='bmd-label-floating'>
+                <label htmlFor='exampleInputEmail1' className='bmd-label-floating'>
                   Username
                 </label>
                 <input
@@ -89,7 +88,7 @@ const Signup = (props) => {
                 <span className='bmd-help'>{errors.username}</span>
               </div>
               <div className='form-group'>
-                <label for='exampleInputEmail1' className='bmd-label-floating'>
+                <label htmlFor='exampleInputEmail1' className='bmd-label-floating'>
                   Email address
                 </label>
                 <input
@@ -104,7 +103,7 @@ const Signup = (props) => {
               </div>
               <div className='form-group'>
                 <label
-                  for='exampleInputPassword1'
+                  htmlFor='exampleInputPassword1'
                   className='bmd-label-floating'
                 >
                   Password
