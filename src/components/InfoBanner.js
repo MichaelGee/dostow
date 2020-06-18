@@ -3,7 +3,7 @@ import Storage from "../images/storage.png";
 import User2 from "../images/user2.png";
 import Left from "../images/left.png";
 
-const Infobanner = () => {
+const InfoBanner = () => {
   return (
     <div>
       <div className='info-banner'>
@@ -57,4 +57,4 @@ const Infobanner = () => {
   );
 };
 
-export default Infobanner;
+export default InfoBanner;

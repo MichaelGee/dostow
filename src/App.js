@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./components/home";
-import Signup from "./components/signup";
-import Mailspace from "./components/mailspace";
+import Home from "./pages/home";
+import Signup from "./pages/signup";
+import Mailspace from "./pages/mailspace";
 import ProtectedRoute from "./protectedRoute";
 import firebase from "./components/fireConfig";
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./navbar";
-import Infobanner from "./infobanner";
-import Accounts from "./accounts";
+import Navbar from "../components/Navbar";
+import InfoBanner from "../components/InfoBanner";
+import Accounts from "../components/Accounts";
 import Cancel from "../images/close.svg";
 
 const Mailspace = () => {
@@ -23,7 +23,7 @@ const Mailspace = () => {
         <main className='bmd-layout-content'>
           <div>
             <Navbar />
-            <Infobanner />
+            <InfoBanner />
             <div className='email-banner'>
               <h1>E-Mail Accounts</h1>
               <button
@@ -42,7 +42,7 @@ const Mailspace = () => {
         <div id='dw-p1' className='bmd-layout-drawer bg-faded'>
           <div className='d-flex new-email-header '>
             <h1>New E-Mail Account</h1>
-            <img src={Cancel} alt='close' class='close' onClick={toggle} />
+            <img src={Cancel} alt='close' className='close' onClick={toggle} />
           </div>
 
           <form className='new-email-form'>

@@ -1,5 +1,5 @@
 import React from "react";
-import firebase from "./fireConfig";
+import firebase from "../components/fireConfig";
 
 
 const Signup = (props) => {

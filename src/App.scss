@@ -20,7 +20,7 @@ form{
 }
 label {
   color: #111111 !important;
-} 
+}
 
 .custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control {
   background-image: linear-gradient(0deg,black 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;}
@@ -33,7 +33,7 @@ label {
 /* Button style */
 button {
   border: none;
-  border-radius: 0.13em;
+  border-radius: 2px;
   padding: 4px 15px;
   font-size: 16px;
   cursor: pointer;
@@ -190,12 +190,12 @@ color: white !important;
 /* Adresses */
 .options{
   display: flex;
-  
+
   a{
     margin-left: 0.7rem;
     cursor: pointer;
   }
-} 
+}
 .account{
   padding: 0.4rem 0.4rem;
   border-top: 1px solid rgb(211, 207, 207);
@@ -208,7 +208,7 @@ color: white !important;
 
 .email{
   margin-left: 0.8rem;
- 
+
 }
 .bmd-layout-backdrop{
   display: none;
@@ -247,7 +247,7 @@ color: white !important;
   }
   .dostow{
     font-size: 2.5rem !important;
-    
+
   }
   .navbar-brand{
     font-weight: 300;
@@ -268,7 +268,7 @@ color: white !important;
     margin: 0 1rem;
   }
   .logout-btn{
-   
+
     font-size: 1rem;
 
   }
