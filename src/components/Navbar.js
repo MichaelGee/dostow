@@ -1,7 +1,7 @@
 import React from "react";
 import Stack from "../images/stack.png";
 import User from "../images/user.png";
-import firebase from "./fireConfig";
+import firebase from "../services/fireConfig";
 import { withRouter } from "react-router-dom";
 
 const Navbar = (props) => {

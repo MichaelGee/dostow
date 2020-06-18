@@ -1,6 +1,6 @@
 import React from "react";
 
-const Accounts = () => {
+export const Accounts = () => {
   return (
     <div>
       <div>
@@ -42,4 +42,4 @@ const Accounts = () => {
   );
 };
 
-export default Accounts;
+

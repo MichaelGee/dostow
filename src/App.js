@@ -5,7 +5,7 @@ import Home from "./pages/home";
 import Signup from "./pages/signup";
 import Mailspace from "./pages/mailspace";
 import ProtectedRoute from "./protectedRoute";
-import firebase from "./components/fireConfig";
+import firebase from "./services/fireConfig";
 
 function App() {
   const [initializedFirebase, setInitializeFirebase] = React.useState(false);

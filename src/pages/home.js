@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import fire from "../components/fireConfig";
+import fire from "../services/fireConfig";
 
 const Home = (props) => {
   const [email, setEmail] = React.useState("");

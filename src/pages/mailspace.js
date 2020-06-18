@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import InfoBanner from "../components/InfoBanner";
-import Accounts from "../components/Accounts";
+import {InfoBanner} from "../components/InfoBanner";
+import {Accounts} from "../components/Accounts";
 import Cancel from "../images/close.svg";
 
 const Mailspace = () => {
