@@ -25,7 +25,7 @@ export const InfoBanner = () => {
               <div
                 className='progress-bar'
                 role='progressbar'
-                aria-valuenow='0'
+                aria-valuenow='5'
                 aria-valuemin='0'
                 aria-valuemax='100'
               ></div>
